@@ -11,9 +11,10 @@
     </style>
 
     <script>
-      
-}
-    </script>
+        function pr() {
+        document.getElementById("result").innerHTML = document.getElementById('name').value + " " + document.getElementById('key').value + " " + document.getElementById('card1').value + " " + document.getElementById('card2').value + " " + document.getElementById('cam').value + " " + document.getElementById('cart').value + " " + document.getElementById('cam').value + " " + document.getElementById('servey').value;
+      }
+      </script>
 
 
 </head>
@@ -21,20 +22,19 @@
 <body>
     <h2>송파2 2웹1조 퇴근 취합</h2>
 
-    <form action="gathering.html" methond="get">
+    <form action="PayslipServlet" method="get">
         이름: <input id="name" type="text" size="6"><br>
-        차키: 키박스<input id="key" type="checkbox"> 2조키박스<input type="checkbox"> 3조키박스<input type="checkbox"> 4조키박스<input type="checkbox"> CL<input type="checkbox"><br>
-        주카: 반납<input id="card1" type="checkbox"> 없음<input type="checkbox"><br>
-        보카: 반납<input id="card2" type="checkbox"> 없음<input type="checkbox"><br>
-        인캠: 정상<input type="checkbox"> 비정상<input type="checkbox"><br>
-        카트: 반납<input type="checkbox"> 파란색없음<input type="checkbox"> 녹색없음<input type="checkbox"><br>
-        서베이: 완료<input type="checkbox"> 미완<input type="checkbox"><br>
+        차키: 키박스<input id="key" type="checkbox" value="키박스"> 2조키박스<input type="checkbox"> 3조키박스<input type="checkbox"> 4조키박스<input type="checkbox"> CL<input type="checkbox"><br>
+        주카: 반납<input id="card1" type="checkbox" value="반납"> 없음<input type="checkbox"><br>
+        보카: 반납<input id="card2" type="checkbox" value="반납"> 없음<input type="checkbox"><br>
+        인캠: 정상<input id="cam" type="checkbox" value="정상"> 비정상<input type="checkbox"><br>
+        카트: 반납<input id="cart" type="checkbox" value="반납"> 파란색없음<input type="checkbox"> 녹색없음<input type="checkbox"><br>
+        서베이: 완료<input id="servey" type="checkbox" value="완료"> 미완<input type="checkbox"><br>
+      
         <br>
-        <input type="submit">
+        <input type="button" value="submit" onclick="pr()">
     </form>
-
-    <p id="gather"></p>
-
+    gg: <p id="result"></p>
 
 </body>
 
